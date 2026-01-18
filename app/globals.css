@@ -2,27 +2,43 @@
 
 @theme {
   /* Font Sizes */
-  --text-10: 10px; --text-10--line-height: 14px;
-  --text-12: 12px; --text-12--line-height: 16px;
-  --text-14: 14px; --text-14--line-height: 20px;
-  --text-16: 16px; --text-16--line-height: 24px;
-  --text-18: 18px; --text-18--line-height: 22px;
-  --text-20: 20px; --text-20--line-height: 24px;
-  --text-24: 24px; --text-24--line-height: 30px;
-  --text-26: 26px; --text-26--line-height: 32px;
-  --text-30: 30px; --text-30--line-height: 38px;
-  --text-36: 36px; --text-36--line-height: 44px;
+  --text-10: 10px;
+  --text-10--line-height: 14px;
+  --text-12: 12px;
+  --text-12--line-height: 16px;
+  --text-14: 14px;
+  --text-14--line-height: 20px;
+  --text-16: 16px;
+  --text-16--line-height: 24px;
+  --text-18: 18px;
+  --text-18--line-height: 22px;
+  --text-20: 20px;
+  --text-20--line-height: 24px;
+  --text-24: 24px;
+  --text-24--line-height: 30px;
+  --text-26: 26px;
+  --text-26--line-height: 32px;
+  --text-30: 30px;
+  --text-30--line-height: 38px;
+  --text-36: 36px;
+  --text-36--line-height: 44px;
 
   /* Colors & Custom Gradients */
   --color-sky-1: #f0f9ff;
   --color-black-1: #1a1a1a;
   --color-black-2: #333333;
-  --background-image-bank-gradient: linear-gradient(90deg, #0179fe 0%, #4893ff 100%);
-  --background-image-gradient-mesh: url('/icons/gradient-mesh.svg');
+  --background-image-bank-gradient: linear-gradient(
+    90deg,
+    #0179fe 0%,
+    #4893ff 100%
+  );
+  --background-image-gradient-mesh: url("/icons/gradient-mesh.svg");
 
   /* Shadows */
-  --shadow-chart: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
-  --shadow-profile: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-chart: 0px 1px 3px rgba(16, 24, 40, 0.1),
+    0px 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-profile: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
   --shadow-credit-card: 0px 12px 16px -4px rgba(16, 24, 40, 0.2);
 }
 
@@ -95,11 +111,35 @@
 }
 
 @utility bank-card {
-  @apply relative flex h-[190px] w-full max-w-[320px] justify-between rounded-[20px] border border-white bg-bank-gradient shadow-credit-card backdrop-blur-[6px];
+  @apply relative flex h-[190px] w-full max-w-[320px] justify-between rounded-[20px] border border-white shadow-credit-card backdrop-blur-[6px];
 }
 
 @utility sidebar {
   @apply sticky left-0 top-0 flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
+}
+
+@utility sidebar-logo {
+  @apply 2xl:text-26 text-[26px] font-bold text-black-1 max-xl:hidden;
+}
+
+@utility sidebar-link {
+  @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start;
+}
+
+@utility sidebar-label {
+  @apply text-16 font-semibold text-black-2 max-xl:hidden ml-[40px] w-[200px];
+}
+
+.header-box {
+  @apply flex flex-col gap-1;
+}
+
+.header-box-title {
+  @apply text-24 lg:text-30 font-semibold text-gray-900;
+}
+
+.header-box-subtext {
+  @apply text-14 lg:text-16 font-normal text-gray-600;
 }
 
 /* Global Overrides */
